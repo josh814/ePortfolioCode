@@ -1,6 +1,7 @@
 ﻿:root {
     font-size: 16px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: opensans-regular-webfont;
+    
     --text-primary: #244268;
     --text-secondary: #ececec;
     --bg-primary: #91cffe;
@@ -8,12 +9,21 @@
     --transition-speed: 600ms;
 }
 
+
+@font-face {
+    font-family: 'ubuntu-regular-webfont';
+    src: url('fonts/ubuntu_reg/ubuntu-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'opensans-regular-webfont';
+    src: url('fonts/open_sans_reg/opensans-regular-webfont.woff') format('woff');
+}
 body {
     color: black;
-    background-color: white;
+    background-color: #91cffe;
     margin: 0;
     padding: 0;
-}
+}   
 
     body::-webkit-scrollbar {
         width: 0.8rem;
@@ -51,10 +61,18 @@ main {
 
 .nav-item {
     width: 100%;
+
 }
 
-    .nav-item:last-child {
-        margin-top: auto;
+    
+
+    .nav-item span {
+        margin-right: auto;
+    }
+
+    .nav-item i {
+        margin: 25%;
+        margin-right: auto;
     }
 
 .nav-link {
@@ -65,12 +83,15 @@ main {
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: var(--transition-speed);
+
 }
 
     .nav-link:hover {
         filter: grayscale(0%) opacity(1);
         background: var(--bg-secondary);
         color: var(--text-secondary);
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
 .link-text {
@@ -85,11 +106,11 @@ main {
 }
 
 .fa-primary {
-    color: #ff7eee;
+    color: #2220ff;
 }
 
 .fa-secondary {
-    color: #df49a6;
+    color: #5851ff;
 }
 
 .fa-primary,
@@ -107,6 +128,7 @@ main {
     font-size: 1.5rem;
     letter-spacing: 0.3ch;
     width: 100%;
+    border-bottom-right-radius: 10px;
 }
 
     .logo svg {
@@ -123,6 +145,13 @@ main {
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
+}
+
+.intro {
+    
+    background: #bbe0fc;
+    height: 30vh;
+    width: 40vw;
 }
 
 /* Small screens */
@@ -145,6 +174,14 @@ main {
         justify-content: center;
     }
 
+        .nav-link:hover {
+            filter: grayscale(0%) opacity(1);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 0px;
+        }
     main {
         margin: 0;
     }
@@ -173,6 +210,8 @@ main {
             .navbar:hover .logo-text {
                 left: 0px;
             }
+
+   
 }
 
 .dark {
@@ -211,3 +250,4 @@ main {
 .solar #solarIcon {
     display: block;
 }
+
