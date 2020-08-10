@@ -4,7 +4,7 @@
     
     --text-primary: #244268;
     --text-secondary: #ececec;
-    --bg-primary: #91cffe;
+    
     --bg-secondary: #55b5fe;
     --transition-speed: 600ms;
 }
@@ -20,7 +20,7 @@
 }
 body {
     color: black;
-    background-color: #91cffe;
+    background: linear-gradient(0deg, #91cffe 0%, #12287d 33%, #00091e 65%);
     margin: 0;
     padding: 0;
 }   
@@ -40,9 +40,11 @@ body {
 main {
     margin-left: 5rem;
     padding: 1rem;
+  
 }
 
 .navbar {
+    z-index: 1000;
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
@@ -110,7 +112,6 @@ main {
 .fa-primary {
     color: #2220ff;
 }
-
 .fa-secondary {
     color: #5851ff;
 }
@@ -152,24 +153,29 @@ main {
 
 
 .intro {
+    
     display: flex;
     flex-wrap: wrap;
-    height: 30vh;
+    height: 90vh;
     margin: auto;
     margin-top: 10rem;
     
-    justify-content: center;
-    background: #c7e5fb;
+    
     width: 40vw;
+    border-radius: 40px;
 }
 
 .intro-text {
     
-    position: center;
-   font-size: 3vh;
+   position: absolute;
+   top: 30%;
+   font-size: 10vh;
    
 }
 
+.further-text {
+    font-size: 5vh;
+}
 .prof {
     display: flex;
     width: 15vw;
@@ -179,8 +185,39 @@ main {
 }
 
 
-.name:hover {
-    transition: var(--transition-speed);
+.name {
+    color: #c7028d;
+}
+
+.hill {
+    position: fixed;
+    bottom: -50%;
+    left: 0%;
+ width: 100vw;
+ height: 40vh;
+}
+
+
+.intro-info {
+    position: relative;
+    display: block;
+    margin-top: auto;
+    left: 3rem;
+    background-color: #2220ff;
+    width: 90vw;
+
+    border-radius: 10px;
+    
+}
+
+.intro-info h1 {
+    font-family:ubuntu-regular-webfont;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.detail {
+    left: 3rem;
 }
 
 /* Small screens */

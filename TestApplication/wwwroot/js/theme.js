@@ -1,30 +1,7 @@
-﻿const themeMap = {
-    dark: "light",
-    light: "solar",
-    solar: "dark"
-};
-
-const theme = localStorage.getItem('theme')
-    || (tmp = Object.keys(themeMap)[0],
-        localStorage.setItem('theme', tmp),
-        tmp);
-const bodyClass = document.body.classList;
-bodyClass.add(theme);
-
-function toggleTheme() {
-    const current = localStorage.getItem('theme');
-    const next = themeMap[current];
-
-    bodyClass.replace(current, next);
-    localStorage.setItem('theme', next);
-}
-
-
-
-document.getElementById('themeButton').onclick = toggleTheme;
-
-$(document).ready(function () {
-   $
-
-
-})
+﻿$(document).ready(function () {
+    $('#first').animate({ bottom: '0%' }, 1000)
+    $('#first').animate({ bottom: '-1%' }, 300)
+    setTimeout(500)
+    $('#second').animate({ bottom: '0%' }, 1000)
+    $('#second').animate({ bottom: '-1%' }, 300)
+});
